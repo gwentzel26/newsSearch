@@ -1,16 +1,19 @@
 {
     "name": "NewsSearch_API",
     "version": "1.0.1",
-    "description": "Mongoose back-end project - Develop",
-    "main": "index.js",
+    "description": "MERN Application with Graph QL",
+    "main": "server/server.js",
     "license": "MIT",
     "scripts": {
-        "start": "node index",
+        "start": "nodemon index.js",
         "dev": "nodemon index",
-        "seed": "node utils/seed",
-        "heroku-postbuild": "node utils/seed.js"
+        "install": "cd server && npm i && cd ../client && npm i",
+        "seed": "cd server && npm run seed",
+        "build": "cd client && npm run build"
     },
     "dependencies": {
+        "body-parser": "^1.20.0",
+        "cors": "^2.8.5",
         "express": "^4.17.1",
         "moment": "^2.29.2",
         "mongoose": "^6.0.13",
